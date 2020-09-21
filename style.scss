@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #111;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 100px;
+    z-index: 1000;
+
+    @media (max-width: 991px) {
+        padding: 20px 50px;
+    }
+
+    .logo {
+        position: relative;
+        font-size: 2em;
+        font-weight: 700;
+        color: #fff;
+
+        text: {
+            transform: uppercase;
+            decoration: none;
+        }
+
+        letter-spacing: 2px;
+    }
+
+    .toggle {
+        max-width: 60px;
+        cursor: pointer;
+
+        img {
+            max-width: 100%;
+        }
+    }
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    @media (max-width: 991px) {
+        padding: 150px 50px 0;
+        flex-direction: column;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 400px;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+
+        @media (max-width: 991px) {
+            display: none;
+        }
+    }
+
+    video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.1;
+        pointer-events: none;
+    }
+
+    .textBox {
+        position: relative;
+        max-width: 550px;
+        z-index: 2;
+
+        @media (max-width: 991px) {
+            max-width: 100%;
+        }
+
+        h2 {
+            color: #fff;
+            font-size: 3em;
+            
+            @media (max-width: 991px) {
+                font-size: 2.5em;
+            }
+        }
+
+        p {
+            color: #fff;
+            font-size: 1.1em;
+            margin: 5px 0 25px;
+        }
+
+        a {
+            position: relative;
+            display: inline-block;
+            background: #fff;
+            color: #111;
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 1.1em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+    }
+
+    .videoBox {
+        position: relative;
+        background: #fff;
+        margin-left: 40px;
+        width: 100%;
+        height: 400px;
+        z-index: 1;
+
+        @media (max-width: 991px) {
+            width: 100%;
+            height: 200px;
+            margin: 40px 0 100px;
+        }
+
+        video {
+            opacity: 1;
+        }
+    }
+
+    .sci {
+        position: absolute;
+        bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media (max-width: 991px) {
+            left: 50px;
+        }
+
+        li {
+            list-style: none;
+
+            a {
+                display: inline-block;
+                margin-right: 15px;
+
+                img {
+                    transform: scale(0.5);
+                    filter: invert(1);
+                }
+            }
+        }
+    }
+}
